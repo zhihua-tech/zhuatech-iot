@@ -7,5 +7,6 @@
 | GET | `/api/admin/work-orders` | 设备任务 |
 | GET | `/api/shopfloor/dashboard` | 现场运维工作台 |
 | POST | `/api/shopfloor/work-orders/{id}/reports` | 提交巡检数据 |
+| POST | `/api/admin/telemetry-health` | 评估设备遥测与连接健康度 |
 
 版权所有 © 2026 上海如静知华信息科技有限公司。

@@ -58,6 +58,10 @@ npm run dev:demo
 
 完整部署：复制 `.env.example` 为 `.env`，替换强密码和 `JWT_SECRET` 后运行 `docker compose up --build`。
 
+## 新增：设备遥测健康评估
+
+新增 `POST /api/admin/telemetry-health`，基于消息到达率、解析错误率、时延、电量、信号强度和最后在线时间计算设备健康分，区分 `HEALTHY`、`DEGRADED`、`CRITICAL` 与 `OFFLINE`，并返回现场排查建议。
+
 ## 生产化提示
 
 真实工业现场需增加 MQTT/OPC UA/Modbus 接入、证书认证、边缘缓存、指令审批、网络分区、协议白名单、时序数据库、海量数据归档和高可用设计。本仓库的设备与遥测均为演示数据。
