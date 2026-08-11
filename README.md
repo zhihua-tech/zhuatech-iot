@@ -77,3 +77,7 @@ npm run dev:demo
 | ![技术咨询微信](docs/images/zhuatech-wechat-consulting.png) | ![商务授权微信](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：工业物联网平台、IoT 开源源码、设备管理系统、设备数据采集、边缘计算平台、工业互联网、Java IoT、Vue IoT、知华科技。
+
+## 设备预测性维护
+
+新增 `POST /api/iot/insights/predictive-maintenance`，综合振动、温度、错误事件、保养周期和电池状态计算维护风险，输出 `HEALTHY`、`SCHEDULE` 或 `SHUTDOWN`。
