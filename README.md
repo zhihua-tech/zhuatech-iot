@@ -81,3 +81,7 @@ SEO：工业物联网平台、IoT 开源源码、设备管理系统、设备数�
 ## 设备预测性维护
 
 新增 `POST /api/iot/insights/predictive-maintenance`，综合振动、温度、错误事件、保养周期和电池状态计算维护风险，输出 `HEALTHY`、`SCHEDULE` 或 `SHUTDOWN`。
+
+## 企业级 IoT 设备安全接入
+
+新增 `POST /api/enterprise/iot/device-enrollment-security`，覆盖身份、证书、固件签名、安全启动、加密、严重漏洞、责任人、网络分区和固件基线，返回 `PROVISION / QUARANTINE / BLOCKED`。详见 [设备安全接入说明](docs/ENTERPRISE_DEVICE_ENROLLMENT.md)。
