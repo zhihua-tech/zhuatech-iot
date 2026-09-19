@@ -7,8 +7,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class DeviceEnrollmentSecurityService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -32,11 +38,20 @@ public class DeviceEnrollmentSecurityService {
         return new Assessment(Decision.PROVISION, blockers, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String deviceId, boolean uniqueIdentityVerified,
                           boolean certificateValid, boolean firmwareSigned,
                           boolean secureBootEnabled, boolean transportEncrypted,
                           @Min(0) int openCriticalVulnerabilities, boolean ownerAssigned,
                           boolean networkSegmentAssigned, boolean firmwareBaselineCurrent) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(Decision decision, List<String> blockers, List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { PROVISION, QUARANTINE, BLOCKED }
 }

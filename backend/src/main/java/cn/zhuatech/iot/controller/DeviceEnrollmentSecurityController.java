@@ -6,12 +6,21 @@ import cn.zhuatech.iot.service.DeviceEnrollmentSecurityService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/enterprise/iot")
 public class DeviceEnrollmentSecurityController {
     private final DeviceEnrollmentSecurityService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public DeviceEnrollmentSecurityController(DeviceEnrollmentSecurityService service) { this.service = service; }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/device-enrollment-security")
     public ApiResponse<DeviceEnrollmentSecurityService.Assessment> assess(
         @Valid @RequestBody DeviceEnrollmentSecurityService.Request request) {

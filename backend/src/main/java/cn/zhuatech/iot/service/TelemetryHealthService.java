@@ -1,7 +1,13 @@
 /* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.iot.service;
 import jakarta.validation.constraints.*; import org.springframework.stereotype.Service; import java.util.ArrayList; import java.util.List;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service public class TelemetryHealthService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request r){
         double availability=r.expectedMessages()==0?0:Math.min(100,r.receivedMessages()*100.0/r.expectedMessages());
         double errorRate=r.receivedMessages()==0?100:r.errorMessages()*100.0/r.receivedMessages();
@@ -12,9 +18,18 @@ import jakarta.validation.constraints.*; import org.springframework.stereotype.S
         List<String> actions=new ArrayList<>(); if(r.lastSeenMinutes()>30)actions.add("检查设备供电、网络与网关连接"); if(errorRate>5)actions.add("分析遥测解析和协议错误"); if(r.batteryPercent()<20)actions.add("安排电池更换或充电"); if(r.signalStrength()<40)actions.add("优化现场信号覆盖");
         return new Result(round(availability),round(errorRate),round(score),status,actions);
     }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private double round(double v){return Math.round(v*100)/100.0;}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String deviceId,@Min(0) int expectedMessages,@Min(0) int receivedMessages,@Min(0) int errorMessages,
         @Min(0) int averageLatencyMs,@Min(0) @Max(100) int batteryPercent,@Min(0) @Max(100) int signalStrength,@Min(0) int lastSeenMinutes){}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(double availabilityPercent,double errorRatePercent,double healthScore,String status,List<String> actions){}
 }
 
