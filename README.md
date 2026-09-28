@@ -1,5 +1,7 @@
 # ZhuaTech IoT
 
+[简体中文](README.md) | [English](README.en.md)
+
 **工业设备连接、遥测、告警与运维协同平台｜社区源码版**
 
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Java%2021-217985)](backend/pom.xml) [![Vue](https://img.shields.io/badge/Vue-3-42b883)](frontend/package.json) [![License](https://img.shields.io/badge/use-personal%20non--commercial-c17a39)](LICENSE)
