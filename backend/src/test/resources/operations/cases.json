@@ -1,0 +1,63 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "totalMessages": "#144000",
+      "totalBytes": "#43200000"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "limitMiB": "40"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "intervalSeconds": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "windowSeconds": "61"
+    },
+    "expected": {
+      "messagesPerDevice": "#2"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "devices": "0"
+    },
+    "expected": {
+      "totalBytes": "#0",
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "payloadBytes": "0",
+      "overheadBytes": "0"
+    },
+    "expected": {
+      "totalBytes": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "limitMiB": "0"
+    },
+    "expected": {},
+    "error": true
+  }
+]
